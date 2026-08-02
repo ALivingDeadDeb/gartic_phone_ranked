@@ -41,13 +41,13 @@ function vote(num){ //vote and send to the backend to store
 
 document.getElementById('stats-link').addEventListener("click", function(event) { //direct to stats page
     event.preventDefault();
-    const targetURL = "stats";
+    const targetURL = "../../pages/stats.html";
     window.location.href = targetURL;
 });
 
 document.getElementById('gartic-files-link').addEventListener("click", function(event) {
     event.preventDefault();
-    const targetURL = "gartic-files";
+    const targetURL = "../../pages/gartic-files.html";
     window.location.href = targetURL;
 })
 

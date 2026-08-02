@@ -56,7 +56,7 @@ function structureStatistics(data) { //structure in the html file
 
 document.getElementById('index-link').addEventListener("click", function(event) { //go back to index
     event.preventDefault();
-    const targetURL = "./";
+    const targetURL = "../../index.html";
     window.location.href = targetURL;
 });
 
