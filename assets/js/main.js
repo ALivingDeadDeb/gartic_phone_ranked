@@ -21,21 +21,19 @@ function vote(num){ //vote and send to the backend to store
         img2: img2
     };
 
-    fetch(`${BACKEND_URL}/api/receive-vote`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(dataToSend)
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log("Success from Flask", data);
-    })
-    .catch(error => {
+    try {
+        const response = await fetch(`${BACKEND_URL}/api/receive-vote`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dataToSend)
+        });
+        const data = await response.json();
+        return data;
+    } catch (error) {
         console.error('Error: ', error);
-    });
-
+    };
     displayRandomImages();
 };
 
