@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" contents="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatable" content="ie-edge">
+        <link rel="stylesheet", href="{{ url_for('static', filename='style.css') }}">
+        <title>Gartic Phone Stats</title>
+    </head>
+    <body>
+        <a href="#", id="index-link">go back</a>
+        <div class="header">
+            <a href="" id="clear-stats">clear statistics</a>
+            <a href="" id="clear-display">clear display</a>
+            <div class="label-obj">
+                <label for="filter">Filter Options:</label>
+                <select name="filter" id="filter">
+                    <option value="APPEARANCES">Appearances</option>
+                    <option value="RATIO VOTES">Voted for/voted against ratio</option>
+                    <option value="RATIO VOTE/APPEARANCES">Voted for/appearances ratio</option>
+                </select>
+            </div>
+            <div class="label-obj">
+                <label for="limit">Num of Objects:</label>
+                <input type="number" id="limit" name="limit" min="1" max="100" />
+            </div>
+            <button id="display-stats">Display Stats</button>
+        </div>
+        <ol id="results-container">
+        </ol>
+        <script type="module" src="../assets/js/statistics-display.js"></script>
+    </body>
+</html>

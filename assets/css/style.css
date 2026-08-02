@@ -1,0 +1,73 @@
+p {
+    font-size: 18px;
+    justify-self: center;
+}
+
+a {
+    font-size: 18px;
+}
+
+#filter{
+    width: 100px;
+}
+
+.gartic-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 500px;
+    justify-content: center;
+    padding: 50px;
+}
+
+#gartic-1{
+    background: rgb(244, 141, 141);
+}
+
+#gartic-2{
+    background: rgb(138, 168, 255);
+}
+
+.parent-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+img{
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+}
+
+.label-obj{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+#gartic-files-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gartic-files-object{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
