@@ -1,6 +1,6 @@
 import imageArray from "./image-list.js";
 
-export const BACKEND_URL = "https://gartic-phone-ranked-backend.onrender.com"; 
+const BACKEND_URL = "https://gartic-phone-ranked-backend.onrender.com"; 
 
 function displayRandomImages() { //choose and display a random gartic phone gif
     const image1 = imageArray[Math.floor(Math.random()*imageArray.length)]; 
