@@ -1,5 +1,7 @@
 import imageArray from "./image-list.js";
 
+console.log(window.location.origin);
+
 const BACKEND_URL = "https://gartic-phone-ranked-backend.onrender.com"; 
 
 function displayRandomImages() { //choose and display a random gartic phone gif
@@ -49,7 +51,6 @@ document.getElementById('gartic-files-link').addEventListener("click", function(
     event.preventDefault();
     const targetURL = window.location.origin + "/pages/gartic-files.html";
     window.location.href = targetURL;
-    console.log(window.location.origin);
 })
 
 // event listeners for buttons
