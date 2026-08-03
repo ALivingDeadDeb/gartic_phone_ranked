@@ -47,6 +47,7 @@ document.getElementById('stats-link').addEventListener("click", function(event) 
 
 document.getElementById('gartic-files-link').addEventListener("click", function(event) {
     event.preventDefault();
+    console.log(window.location.origin);
     const targetURL = window.location.origin + "/pages/gartic-files.html";
     window.location.href = targetURL;
 })
