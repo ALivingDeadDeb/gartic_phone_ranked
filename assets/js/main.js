@@ -1,6 +1,6 @@
 import imageArray from "./image-list.js";
 
-const BACKEND_URL = "https://gartic-phone-ranked-backend.onrender.com"; 
+export const BACKEND_URL = "https://gartic-phone-ranked-backend.onrender.com"; 
 
 function displayRandomImages() { //choose and display a random gartic phone gif
     const image1 = imageArray[Math.floor(Math.random()*imageArray.length)]; 
@@ -11,7 +11,7 @@ function displayRandomImages() { //choose and display a random gartic phone gif
     return image1, image2
 }
 
-function vote(num){ //vote and send to the backend to store
+async function vote(num){ //vote and send to the backend to store
     const img1 = document.getElementById('gif-1').src;
     const img2 = document.getElementById('gif-2').src;
     
@@ -27,14 +27,16 @@ function vote(num){ //vote and send to the backend to store
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(dataToSend)
+            body: JSON.stringify(dataToSend),
         });
+
         const data = await response.json();
+        console.log(data);
+        displayRandomImages();
         return data;
     } catch (error) {
         console.error('Error: ', error);
     };
-    displayRandomImages();
 };
 
 document.getElementById('stats-link').addEventListener("click", function(event) { //direct to stats page

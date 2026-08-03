@@ -2,7 +2,7 @@ const BACKEND_URL = "https://gartic-phone-ranked-backend.onrender.com";
 
 async function requestGarticFiles() { //get all gartic phones that have appeared ever
     try {
-        const response = await fetch(`${BACKEND_URL}/receive-gartic-files`, {
+        const response = await fetch(`${BACKEND_URL}/api/receive-gartic-files`, {
             method: 'POST',
         });
 

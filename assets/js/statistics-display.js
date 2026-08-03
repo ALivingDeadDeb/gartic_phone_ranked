@@ -1,22 +1,22 @@
-const BACKEND_URL = 'https://gartic-phone-ranked-backend.onrender.com';
+const BACKEND_URL = "https://gartic-phone-ranked-backend.onrender.com"; 
 
 async function requestStatistics(filter, limit) { 
     const dataToSend = {
         filter: filter,
-        limit: limit
+        limit: Number(limit)
     };
 
     try {
-    const response = await fetch(`${BACKEND_URL}/api/receive-stat-request`, { //request stats from backend
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(dataToSend)
-    })
-    
-    const data = await response.json();
-    return data;
+        const response = await fetch(`${BACKEND_URL}/api/receive-stat-request`, { //request stats from backend
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dataToSend)
+        });
+        
+        const data = await response.json();
+        return data;
     } catch (error) {
         console.error("Error: ", error)
     }
@@ -34,11 +34,6 @@ async function clearStatistics() { //request to backend to clear stats
         console.error("Error: ", error)
     }
 };
-
-document.getElementById('clear-stats').addEventListener('click', function(event) { //clear stats
-    clearStatistics();
-});
-
 
 function structureStatistics(data) { //structure in the html file
     console.log(data);
