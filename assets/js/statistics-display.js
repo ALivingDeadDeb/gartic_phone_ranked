@@ -65,3 +65,5 @@ document.getElementById('display-stats').addEventListener("click", async functio
     const stats = await requestStatistics(filter, limit); 
     structureStatistics(stats); //structure on html page
 })
+
+console.log(window.location.origin);
